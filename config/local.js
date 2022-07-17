@@ -2,7 +2,6 @@
 // File Name: local.js
 // Author's Name: TEAM FIX-IT
 // Web app name: SELL-IT
-// Web app name: Car Applcation
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
