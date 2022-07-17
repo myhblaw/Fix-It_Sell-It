@@ -1,0 +1,47 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Details page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+                <div class="form-group">
+                    <label for="makeTextField">Product Name</label>
+                    <strong><%= Prod.productname %></strong>
+                </div>
+                <div class="form-group">
+                    <label for="modelTextField">Product Description:</label>
+                    <strong><%= Prod.productdescription %></strong>
+                </div>
+                <div class="form-group">
+                    <label for="yearTextField">Product Condition:</label>
+                    <strong><%= Prod.condition %></strong>                    
+                </div>
+                <div class="form-group">
+                    <label for="kmTextField">Product Colork:</label>
+                    <strong><%= Prod.color %></strong>
+                </div>
+                <div class="form-group">
+                    <label for="doorsTextField">Name Of Seller:</label>
+                    <strong><%= Prod.sellername %></strong>                    
+                </div>
+             
+                <div class="form-group">
+                    <label for="priceTextField">Price:</label>
+                    <strong>$ <%= Prod.price %></strong>                    
+                </div>
+                <br />
+                
+                <a href="/Products/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>

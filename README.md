@@ -1,2 +1,2 @@
-# Fix-It_Sell-It
- Team Project
+TEAM FIX-IT 
+SELL-IT

@@ -1,0 +1,117 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+        
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= Prod._id %>"
+                    >
+                    <label for="ProdTextField">Product Condition</label>
+                    <input type="text" class="form-control"
+                        id="makeTextField"
+                        placeholder="Enter Product Condition"
+                        name="condition" 
+                        value="<%= Prod.condition %>"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="modelTextField">Product Name</label>
+                    <input type="text" class="form-control"
+                        id="modelTextField"
+                        placeholder="Enter Name Of Product"
+                        name="productname" 
+                        value="<%= Prod.productname %>"
+                        >
+                </div>
+                <br />
+               
+                <div class="form-group">
+                    <label for="YearTextField">Enter Your Full Name</label>
+                    <input type="text" class="form-control"
+                        id="YearTextField"
+                        placeholder="Enter Your Name"
+
+                        name="sellername" 
+                        value="<%= Prod.sellername %>"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="kilometersTextField">Product Color</label>
+                    <input type="text"
+                    class="form-control"
+                    id="kilometersTextField"
+                    placeholder="Enter Product Color"
+                    name="color" 
+                    value="<%= Prod.color %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="doorsTextField">Product Description</label>
+                    <input type="text"
+                    class="form-control"
+                    id="doorsTextField"
+                    placeholder="Enter A Short Description Of Product"
+                    name="productdescription" 
+                    value="<%= Prod.productdescription %>"
+                    required>
+                </div>
+<!--
+                <div class="form-group">
+                    <label for="seatsTextField">Seats</label>
+                    <input type="number"
+                    class="form-control"
+                    id="seatsTextField"
+                    placeholder="5"
+                    name="seats" 
+                    value="<%= Prod.seats %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modelTextField">Color</label>
+                    <input type="text" class="form-control"
+                        id="colorTextField"
+                        placeholder="Enter the color"
+                        name="color" 
+                        value="<%= Prod.color %>"
+                        >
+                </div> -->
+
+                <div class="form-group">
+                    <label for="seatsTextField">Price</label>
+                    <input type="number" step="0.01"
+                    class="form-control"
+                    id="priceTextField"
+                    placeholder="9,999.99"
+                    name="price" 
+                    value="<%= Prod.price %>"
+                    required>
+                </div>
+
+                <br/>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/Products/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>

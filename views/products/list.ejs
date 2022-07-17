@@ -1,0 +1,66 @@
+<%- include ../partials/header.ejs %>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br>
+        <div>
+            
+            <a href="/products/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fas fa-plus-circle"></i> 
+                Add New Product To Sell
+            </a>                
+        </div>
+        <br>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Product Name</th>
+                    <th class="text-center">Product Condition</th>
+                    <th class="text-center">Color</th>
+                    <th class="text-center">Product Information Link</th>
+                    <th class="text-center">Name Of Seller</th>
+                  
+                    <th class="text-center">Price</th>
+                    <th class="text-center" colspan="3">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let i = 0; i < ProdList.length; i++) { %>
+                    <tr>
+                        <td class="text-center"><%= ProdList[i].productname %></td>
+                        <td class="text-center"><%= ProdList[i].productdescription %></td>
+                        <td class="text-center"><%= ProdList[i].color %></td>
+                        <td class="text-center"><%= ProdList[i].condition %></td>
+                        <td class="text-center"><%= ProdList[i].sellername %></td>
+                        
+                        <td class="text-center"><%= ProdList[i].price %></td>                        
+                        <td class="text-center">
+                            <a href="/products/details/<%= ProdList[i]._id %>" class="btn btn-success btn-sm"> 
+                            <i class="fas fa-info"></i> </a>
+                        </td>
+                        <td class="text-center">
+                            <!-- ------------------------- -->
+                            <!-- Fix the EDIT button below -->
+                            <!-- ------------------------- -->
+                            <a href="/products/edit/<%= ProdList[i]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <!-- --------------------------- -->
+                            <!-- Fix the DELETE button below -->
+                            <!-- --------------------------- -->
+                            <a href="/products/delete/<%= ProdList[i]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+  
+<%- include ../partials/footer.ejs %>
