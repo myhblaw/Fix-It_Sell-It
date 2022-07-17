@@ -1,8 +1,7 @@
 // create a reference to the model
 // File Name: Prod.js
-// Author's Name: Aruna Ravi Kumar
-// Student ID: 301243154
-// Web app name: Prod Applcation
+// Author's Name: TEAM FIX-IT
+// Web app name: SELL-IT
 let ProdModel = require('../models/prod');
 
 // Gets all Prods from the Database and renders the page to list them all.

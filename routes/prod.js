@@ -1,8 +1,7 @@
 
 // File Name: prod.js
-// Author's Name: Aruna Ravi Kumar
-// Student ID: 301243154
-// Web app name: prod Applcation
+// Author's Name: TEAM FIX-IT
+// Web app name: SELL-IT
 var express = require('express');
 var router = express.Router();
 

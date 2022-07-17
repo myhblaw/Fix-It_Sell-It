@@ -1,7 +1,6 @@
 // Filename: appclient.js
-// Student: Julio Vinicius
-// StudentId: 123456789
-// Date: Jun 02, 2022
+// Author's Name: TEAM FIX-IT
+// Web app name: SELL-IT
 
 console.log('app script is working.');
 

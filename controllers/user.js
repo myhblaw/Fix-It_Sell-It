@@ -1,8 +1,7 @@
 // authentication
 // File Name: user.js
-// Author's Name: Aruna Ravi Kumar
-// Student ID: 301243154
-// Web app name: Car Applcation
+// Author's Name: TEAM FIX-IT
+// Web app name: SELL-IT
 let User = require('../models/user');
 let passport = require('passport');
 

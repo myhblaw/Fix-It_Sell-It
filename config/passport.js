@@ -1,8 +1,7 @@
 
 // File Name: passport.js
-// Author's Name: Aruna Ravi Kumar
-// Student ID: 301243154
-// Web app name: Car Applcation
+// Author's Name: TEAM FIX-IT
+// Web app name: SELL-IT
 const passport = require('passport');
 
 module.exports = function() {
