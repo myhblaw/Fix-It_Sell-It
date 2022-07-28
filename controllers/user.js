@@ -35,7 +35,7 @@ module.exports.renderSignin = function(req, res, next) {
     });
   } else {
     console.log(req.user);
-    return res.redirect('/');
+    return res.redirect('/home');
   }
 };
 
@@ -52,7 +52,7 @@ module.exports.renderSignup = function(req, res, next) {
     });
 
   } else {
-    return res.redirect('/');
+    return res.redirect('/home');
   }
 };
 
@@ -77,11 +77,11 @@ module.exports.signup = function(req, res, next) {
       }
       req.login(user, (err) => {
         if (err) return next(err);
-        return res.redirect('/');
+        return res.redirect('/home');
       });
     });
   } else {
-    return res.redirect('/');
+    return res.redirect('/home');
   }
 };
 
@@ -92,7 +92,7 @@ module.exports.signout = function(req, res, next) {
 
 module.exports.signin = function(req, res, next){
   passport.authenticate('local', {   
-    successRedirect: req.session.url || '/',
+    successRedirect: req.session.url || '/home',
     failureRedirect: '/users/signin',
     failureFlash: true
   })(req, res, next);

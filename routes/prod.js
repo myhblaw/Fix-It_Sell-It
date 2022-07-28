@@ -29,16 +29,16 @@ router.get('/list', prodController.prodList);
 router.get('/details/:id', prodController.details);
 
 // Routers for edit
-router.get('/edit/:id', requireAuth, prodController.displayEditPage);
-router.post('/edit/:id', requireAuth, prodController.processEditPage);
+router.get('/edit/:id',  prodController.displayEditPage);
+router.post('/edit/:id',  prodController.processEditPage);
 
 // Delete
-router.get('/delete/:id', requireAuth, prodController.performDelete);
+router.get('/delete/:id', prodController.performDelete);
 
 /* GET Route for displaying the Add page - CREATE Operation */
-router.get('/add', requireAuth, prodController.displayAddPage);
+router.get('/add', prodController.displayAddPage);
 
 /* POST Route for processing the Add page - CREATE Operation */
-router.post('/add', requireAuth, prodController.processAddPage);
+router.post('/add', prodController.processAddPage);
 
 module.exports = router;
